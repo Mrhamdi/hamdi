@@ -1,11 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-            <title>
-                Home
-            </title>
-    </head>
-    <body>
-        <h1>Welcome to your home </h1>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
+</head>
+
+<body>
+    <div class="login-card">
+        <h1 style="margin-right:0px;margin-left:29px;">Black Hole&nbsp;</h1>
+        <p class="profile-name-card"> </p>
+        <form class="form-signin"><span class="reauth-email"> </span><input class="form-control" type="email" required="" placeholder="Email address" autofocus="" id="inputEmail"><input class="form-control" type="password" required="" placeholder="Password" id="inputPassword">
+            <div
+                class="checkbox">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Remember me</label></div>
+    </div><button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button></form><a href="#" class="forgot-password">Forgot your password?</a></div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
 </html>
