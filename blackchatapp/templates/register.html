@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    register
+    </title>
+</head>
+<style>
+    form{box-shadow: 1px 2px 3px black;width:500px;background-color:rgb(248, 240, 240);margin: 0 auto;padding:40px;height:700px;text-align:left;opacity:90%;}
+    input{
+        height:30px;
+        width:200px;
+        border: gray solid 1px;
+        border-radius:5px;
+    }
+    body{
+        background-color:rgba(253, 246, 183, 0.911) ;
+    }
+    h2{
+        text-align: center;
+        color: rgb(21, 143, 243);
+        font-family:cursive;
+        font-size:35px;
+
+    }
+    P{
+        font-family: monospace;
+        font-size:20px;
+    }
+    #submit{
+        color: white;background-color: #0069d9; border-color: #0f72db;width:100px;height:40px;margin-top:20px;border-radius: 4px;
+    }
+</style>
+<body>
+<form method="POST" action="">
+   
+{% csrf_token %}
+    <h2>KORICA SIGN UP</h2>
+    <p>First name</p>
+    {{form.first_name.lable}}
+    {{form.first_name}}
+    <p>Last name</p>
+    {{form.last_name.lable}}
+    {{form.last_name}}
+    <p>Username</p>
+    {{form.username.lable}}
+    {{form.username}}
+    <p>Email address</p>
+    {{form.email.lable}}
+    {{form.email}}
+    <p>Password</p>
+    {{form.password1.lable}}
+    {{form.password1}}
+    <p>Password confirmation</p>
+    {{form.password2.lable}}
+    {{form.password2}} <br>
+<input type="submit" value="Regester now" id="submit">
+</form>
+
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder='First name';
+    form_fields[2].placeholder='Last name';
+    form_fields[3].placeholder='Username';
+    form_fields[4].placeholder='Email';
+    form_fields[5].placeholder='Password';
+    form_fields[6].placeholder='Password confirmation';
+    
+    for (var field in form_fields ) {
+        form_fields[field].className += 'form-control'
+    }
+</script>
+
+
+
+</body>
+</html>

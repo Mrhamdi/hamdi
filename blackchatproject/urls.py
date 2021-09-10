@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from blackchatapp import views
+from blackchatapp.views import home,payment,register
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',views.index,name='index'),
-     path('',views.home,name='home'),
+    path("",views.home,name="home"),
+    path("payment/bitcoin",views.payment,name="payment"),
+    path('register/',views.register,name='register'),
 ]
